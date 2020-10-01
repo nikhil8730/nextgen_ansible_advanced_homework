@@ -2,7 +2,6 @@
   template:
     src: aws_jq_vars.yml
     dest: /tmp/aws_jq_vars.yml
-
 - name: Generate var file for tower module
   template:
     src: tower_info.yml
@@ -18,3 +17,8 @@
   copy:
     src: inventory_vars.json
     dest: /root/inventory_vars.json
+
+- name: Copy survey json inventory
+  copy:
+    src: survey.jason
+    dest: /tmp/survey.json 
